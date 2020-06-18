@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<div class="center">
+<p>
+  <strong>Category:</strong>
+  <%= @category.category %>
+</p>
+
+<%= link_to 'Edit', edit_category_path(@category), class:"btn btn-success center" %> 
+<%= link_to 'Back', categories_path, class:"btn btn-success center" %>
+</div>

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="center">Categories</h1>
+<div class="center">
+<div class="row row-cols-1 row-cols-md-3 pl-3 pr-3">
+<% @categories.each do |category| %>
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= category.category %></h5>
+        <%= link_to 'Edit', edit_category_path(category), class:"btn btn-success" %>
+       <%= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-success" %>
+      </div>
+    </div>
+  </div>
+    <% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Category', new_category_path, class:"btn btn-success center" %>
+<%= link_to "Home", products_path, class:"btn btn-secondary" %>
+</div>
